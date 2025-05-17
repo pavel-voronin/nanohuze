@@ -1,0 +1,18 @@
+Изврат заказывали?
+<p><span style="color: #00b">&lt;?php
+<br/>
+<br/>$array&nbsp;</span><span style="color: #070">=&nbsp;array
+<br/>(
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;array
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;(
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d00">"name"&nbsp;</span><span style="color: #070">=&gt;&nbsp;</span><span style="color: #d00">"a"</span><span style="color: #070">,
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d00">"person_type_id"&nbsp;</span><span style="color: #070">=&gt;&nbsp;</span><span style="color: #00b">2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #070">),
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;array
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;(
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d00">"name"&nbsp;</span><span style="color: #070">=&gt;&nbsp;</span><span style="color: #d00">"b"</span><span style="color: #070">,
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #d00">"person_type_id"&nbsp;</span><span style="color: #070">=&gt;&nbsp;</span><span style="color: #00b">4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #070">)
+<br/>);
+<br/>
+<br/></span><span style="color: #00b">var_dump&nbsp;</span><span style="color: #070">(&nbsp;(bool)&nbsp;</span><span style="color: #00b">strpos&nbsp;</span><span style="color: #070">(&nbsp;</span><span style="color: #00b">print_r&nbsp;</span><span style="color: #070">(&nbsp;</span><span style="color: #00b">$array</span><span style="color: #070">,&nbsp;</span><span style="color: #00b">true&nbsp;</span><span style="color: #070">),&nbsp;</span><span style="color: #d00">'[person_type_id]&nbsp;=&gt;&nbsp;1'&nbsp;</span><span style="color: #070">)&nbsp;);</span></p>

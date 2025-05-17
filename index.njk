@@ -1,0 +1,15 @@
+<h1>Nanohuze</h1>
+
+{% for post in posts %}
+
+  <article>
+    <h2>{{ post.title }}</h2>
+    <time>{{ post.date | dateFormat("yyyy-MM-dd HH:mm:ss") }}</time>
+    <p>{{ post.content | safe }}</p>
+    <ul>
+      {% for comment in post.comments %}
+        <li>{{ comment.timestamp | dateFormat('yyyy-MM-dd HH:mm:ss') }}: {{ comment.name }}: {{ comment.content | safe }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+{% endfor %}

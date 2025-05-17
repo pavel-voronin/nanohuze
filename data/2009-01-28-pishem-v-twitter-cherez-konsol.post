@@ -1,0 +1,11 @@
+Пишем в twitter через консоль
+<p><a href="http://habrahabr.ru/blogs/linux/50235/" title="Bash и Twitter">Оригинал на Хабре</a></p>
+<p>Если Вы хотите писать в twitter из консоли, Вам потребуется: консоль (bash, csh, etc — шелл пойдёт любой) и утилита curl. В FreeBSD ставить так: <blockquote>$ cd /usr/ports/ftp/curl<br />$ make install clean</blockquote></p>
+<p>Теперь создаём файлик с именем, к примеру, twitter и заполняем его следующим содержимым:</p>
+<blockquote>#!/bin/csh<br />curl --basic --user username:password --data status="$1" 'http://twitter.com/statuses/update.xml' -o /dev/null;</blockquote>
+<p>В зависимости от шелла, вариант может меняться, учтите! И вместо <strong>username</strong> и <strong>password</strong> нужно указать свои учётные данные.</p>
+<p>Теперь выставляем права на запуск этого файла:</p>
+<blockquote>$ chmod +x ./twitter</blockquote>
+<p>...и кладём этот файл в любую директорию, указанную в переменной окружения <strong>$PATH</strong>. Ну или переориентируем <strong>$PATH</strong>, кому что нравится.</p>
+<p>Отныне постить в twitter можно из консоли! Поздравляю!</p>
+<blockquote>$ twitter "Консоль - наше всё, %username%!"</blockquote>

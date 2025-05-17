@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "luxon": "^3.6.1"
+  },
+  "scripts": {
+    "build": "npx eleventy"
+  },
+  "type": "module"
+}

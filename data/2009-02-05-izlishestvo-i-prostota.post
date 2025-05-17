@@ -1,0 +1,27 @@
+Излишество и простота
+Излишество:
+<code>
+function oldP ($length = 8)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;$password = "";
+&nbsp;&nbsp;&nbsp;&nbsp;$possible = "0123456789bcdfghjkmnpqrstvwxyz";
+&nbsp;&nbsp;&nbsp;&nbsp;$i = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;while ($i < $length) { &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$char = substr($possible, mt_rand(0, strlen($possible)-1), 1);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!strstr($password, $char)) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$password .= $char;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$i++;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;return $password;
+}
+</code>
+Простота:
+<code>
+function newP ( $length = 8, $a = "abcdefghijklmnopqrstuvqxyz0123456789" )
+{
+&nbsp;&nbsp;&nbsp;&nbsp;return substr ( str_shuffle ( str_repeat ( $a, $length ) ), 0, $length );
+}
+</code>
