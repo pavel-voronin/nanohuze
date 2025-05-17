@@ -9,4 +9,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("dateFormat", (dateObj, format = "dd.MM.yyyy") => {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });
+
+  eleventyConfig.setOutputDirectory("_site");
 }
